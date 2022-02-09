@@ -1,0 +1,11 @@
+#!/usr/bin/openrc-run
+
+supervisor="supervise-daemon"
+command="/usr/bin/cgproxyd"
+command_args="--execsnoop"
+
+#command_background=1
+
+depend() {
+    after NetworkManager
+}
